@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Your Personal Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: #000000;
+            padding: 12px 3px;
+        } 
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            margin: 0 13px;
+        }
+        table, tr{
+            border: 2px solid black;
+        }
+        .container{
+            max-width: 80vw;
+            margin: 23px auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">PassX</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <p>"Welcome to Password Manager! Securely store and manage your passwords with ease. Your protection is our priority."</p>
+        <h2>Your Password <span id="alert">(Copied!)</span></h2>
+        <table>
+            <tr>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
+            </tr>
+            
+        </table>
+        <h2>Add a Password</h2>
+        <form action="/submit" method="post">
+            <!-- Text input for website -->
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website" required>
+            <br><br>
+
+            <!--Text input for username-->
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+        
+            <!-- Password input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+        
+            <!-- Submit button -->
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
